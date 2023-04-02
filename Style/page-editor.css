@@ -1,7 +1,7 @@
 .Head{
     background-color: var(--red);
     color: white;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
