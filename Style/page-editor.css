@@ -6,13 +6,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: fit-content;
 }
 .Head *{
     margin-top: 8px;
 }
 
 .name h1 {
-    font-size: 50px;
+    font-size: 45px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 5px solid var(--dark-brown) ; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
