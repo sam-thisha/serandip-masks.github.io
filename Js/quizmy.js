@@ -118,6 +118,17 @@ const quizArray = [
     }
 ];
 
+window.onload=()=>{
+    startScreen.classList.remove("hide");
+    displayContainer.classList.add("hide");
+};
+
+startBtn.addEventListener("click",()=>{
+    startScreen.classList.add("hide");
+    displayContainer.classList.remove("hide");
+    initial()
+});
+
 restart.addEventListener("click", () => {
     initial();
     displayContainer.classList.remove("hide");
@@ -184,7 +195,6 @@ function quizCreator() {
         <button class="option-div" onclick="checker(this)">${i.options[3]}</button>`;
 
         quizContainer.appendChild(div);
-
     }
 }
 
@@ -223,14 +233,5 @@ function initial(){
     quizDisplay(questionCount);
 }
 
-startBtn.addEventListener("click",()=>{
-    startScreen.classList.add("hide");
-    displayContainer.classList.remove("hide");
-    initial()
-});
 
-window.onload=()=>{
-    startScreen.classList.remove("hide");
-    displayContainer.classList.add("hide");
-};
 
