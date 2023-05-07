@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 section{
@@ -10,6 +10,7 @@ section{
     background-image: url(../Img/eventbg.jpg);
     background-size: cover;
     padding-top: 100px;
+    font-size: 20px;
 } 
 
 section .leftBox{
