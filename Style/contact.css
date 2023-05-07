@@ -1,0 +1,124 @@
+.container{
+    padding-top: 100px;
+}
+.Head{
+    color: white;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    justify-content: center;
+    background-color: var(--red);
+}
+.Head h1{
+    margin-bottom: 40px;
+}
+
+.sections:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.section{
+    padding: 20px;
+    float: left;
+    width: 50%;
+}
+.sections{
+    padding: 30px 20px;
+    font-size: 20px;
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section2 h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.section1 .contact-info .contact a{
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-size: 24px;
+}
+.section1 .contact-info .contact{
+    margin-bottom: 20px;
+} 
+.map{
+    margin-top: 20px;
+}
+
+.section2{
+    background-color: var(--red);
+    border-radius: 30px;
+    margin-top: 80px;
+}
+.section2::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#fname,#lname,#email,#msg{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.send,.clear{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    display: block;
+    float: right;
+    color: white;
+    font-weight: 700;
+}
+
+.send{
+    background-color: #0378E2;
+}
+.clear{
+    background-color: black;
+}
+
+.contact .fa-facebook{
+    color: #3b5998;
+}
+.contact .fa-instagram{
+    color:#B63092 ;
+}
+.contact .fa-envelope{
+    color: crimson 
+}
+.contact .fa-linkedin{
+    color: #0072b1;
+}
+.contact .fa-phone{
+    color: #00ff00;
+}
+.contact .fa-location-dot{
+    color: crimson;
+}
+
+@media (max-width:800px) {
+
+    .section{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+    
+    }
+    .section2{
+        margin-top: 20px;
+    }
+}

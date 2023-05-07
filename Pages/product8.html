@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- This is the 8th product -->
+        <title>PRODUCTS - SERENDIBMASKS STORE</title>
+
+        <link rel="stylesheet" href="../Style/style.css">
+        <link rel="stylesheet" href="../Style/navbar.css">
+        <link rel="stylesheet" href="../Style/footer.css">
+        <link rel="shortcut icon" href="../Img/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="../Style/onlinestore.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../Img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-link" id="nav-link">
+                <div class="nav-item"><a href="#">Home</a></div>
+                <div class="nav-item"><a href="#">Shop</a></div>
+                <div class="nav-item"><a href="">Gallery</a></div>
+                <div class="nav-item"><a href="../Pages/student.html">Student Details</a></div>
+                <div class="nav-item"><a href="../Pages/quiz.html">Quiz</a></div>
+                <div class="nav-item"><a href="#">Comments</a></div>
+                <div class="nav-item"><a href="">Site Map</a></div>
+                <div class="nav-item dropdown-head active" id="dropdown-head">
+                    Others <i class="fa fa-caret-down"></i>
+                    <div class="dropdown nav-hide active" id="dropdown">
+                        <div class="dropdown-item"><a href="../Pages/contact.html">Contact</a></div>
+                        <div class="dropdown-item  dr-active"><a href="#">Events</a></div>
+                        <div class="dropdown-item"><a href="">Additional 3</a></div>
+                        <div class="dropdown-item"><a href="">Additional 4</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="burger" id="burger">&#9776;</div>
+        </nav>
+          
+        <!-- </div>  -->
+
+        <!-- In our website we provide facility to select item categories -->
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../Img/Storeitems/tool1.png" style="width:100%" class="product-img" id="ProductImg8" alt="serendibmasks">
+
+                    <div class="small-img-raw">
+                        <div class="small-img-col">
+                            <img src="../Img/Storeitems/tool1.png" style="width:100%" class="small-img8" alt="serendibmasks">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../Img/Storeitems/tool2.png" style="width:100%" class="small-img8" alt="serendibmasks">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../Img/Storeitems/tool3.png" style="width:100%" class="small-img8" alt="serendibmasks">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../Img/Storeitems/tool4.png" style="width:100%" class="small-img8" alt="serendibmasks">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <p>Home / Tools</p>
+                    <h1>Mask Styling Tools</h1>
+                    <h4>$<span id="price">52.35</span></h4>
+                    <select onchange="changeIMG(this.value)" name="type" id="type">
+                        <option value="0">Select Category</option>
+                        <option value="Mask Styling Tool Set1">Tool Set</option>
+                    </select>
+
+                    <!-- js part for store data -->
+                    <input type="number" id="quantity" value="1">
+                    <a href="#" class="btn"
+                    onclick= " addToCart(
+                        8, //itemNo,
+                        document.getElementById('price').innerHTML,
+                        document.getElementById('type').value,
+                        document.getElementById('quantity').value
+                        );">Add to cart</a>
+
+                    <br>
+                    <a style="color: red;" href="cart.html"><i class="fa fa-shopping-cart fa-2x"></i></a>
+
+                    <h3>Product Details <i class='bx bx-detail'></i></h3>
+                    <br>
+                    <p>We offer premium wooden traditional masks, handcrafted by skilled artisans using high-quality materials.
+                    Each mask is a unique work of art and comes in a variety of shapes and sizes. Perfect for adding cultural authenticity to your home decor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--title-->
+        <div class="productoneby">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+            </div>
+        </div>
+
+        <!--Products-->
+        <div class="productoneby">
+
+            <div class="row">
+                <div class="col-4">
+                    <a href="../Pages/product6.html"><img src="../Img/Storeitems/bag4.png" alt="serendibmasks"></a>
+                    <h4>Cotton Tote Bag</h4>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <p>$9.24</p>
+                </div>
+                <div class="col-4">
+                    <a href="../Pages/product7.html"><img src="../Img/Storeitems/cap4.png" alt="serendibmasks"></a>
+                    <h4>Unisex Cap</h4>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <p>$7.70</p>
+                </div>
+                <div class="col-4">
+                    <a href="../Pages/product3.html"><img src="../Img/Storeitems/keytag2.png" alt="serendibmasks"></a>
+                    <h4>Wooden Keytag</h4>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <p>$46.19</p>
+                </div>
+                <div class="col-4">
+                    <a href="../Pages/product5.html"><img src="../Img/Storeitems/paint4.png" alt="serendibmasks"></a>
+                    <h4>Watercolours Wallart Painting</h4>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <p>$62</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--JS for product gallery-->
+        <script>
+            var ProductImg8 = document.getElementById("ProductImg8");
+            var SmallImg8 = document.getElementsByClassName("small-img8");
+
+                SmallImg8[0].onclick = function()
+                 {
+                    ProductImg8.src = SmallImg8[0].src;
+                 }
+                SmallImg8[1].onclick = function()
+                 {
+                    ProductImg8.src = SmallImg8[1].src;
+                 } 
+                SmallImg8[2].onclick = function()
+                 {
+                    ProductImg8.src = SmallImg8[2].src;
+                 }
+                SmallImg8[3].onclick = function()
+                 {
+                    ProductImg8.src = SmallImg8[3].src;
+                 } 
+        </script>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../Img/Logo.png" alt="">
+
+            <p class="footer-links">
+                <a href="../Pages/home.html" class="link-1">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Gallery</a>
+                <a href="../Pages/student.html">Student Details</a>
+                <a href="../Pages/quiz.html">Quiz</a>
+                <a href="#">Comments Form</a>
+                <a href="#">Site Map</a>
+
+            </p>
+
+            <p class="footer-copy-right">Serendib Masks © 2023</p>
+            <div class="page-editor">
+                <a href="../Pages/student1.html">
+                    <button>Page Editor</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+94 112 345 678</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="mailto:info@serendipmasks.com">info@serendipmasks.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-about">
+                <span>About us</span>
+                We offers comfortable, high-quality face masks 
+                made in Sri Lanka with sustainable materials, perfect for 
+                daily wear and protection against airborne particles.
+            </p>
+
+            <div class="footer-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="../Js/navbar.js"></script>
+    <script src="../js/cart.js"></script> 
+    <script>
+        
+        function changeIMG(value){
+            let orderTypeNo = parseInt(value.slice(-1));
+            let orderImg = document.getElementsByClassName("product-img");
+            
+            if(orderTypeNo != 0){            
+                imgName = "../Img/Storeitems/tool";
+                imgName = imgName.concat(orderTypeNo,".png");
+                orderImg[0].src = imgName;
+            }
+        }
+        
+        </script> 
+    
+
+</body>
+</html>

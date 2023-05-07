@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --red: #af272e;
+    --yellow: #E2CC20;
+    --orange: #f17f0d;
+    --brown: #880007;
+    --dark-brown: #630005;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    padding-top: 60px;
+    z-index: -1;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+        <!-- This is the cart page.This page connected to onlinestore page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>PRODUCTS - SERENDIBMASKS STORE</title>
+
+        <!--  links to conect css files, google fonts and icons -->
+        <link rel="stylesheet" href="../Style/style.css">
+        <link rel="stylesheet" href="../Style/navbar.css">
+        <link rel="stylesheet" href="../Style/footer.css">
+        <link rel="shortcut icon" href="../Img/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+        <link rel="stylesheet" href="../Style/onlinestore.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+
+    <body>
+
+        <!-- navigation bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../Img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-link" id="nav-link">
+                <div class="nav-item"><a href="#">Home</a></div>
+                <div class="nav-item"><a href="../Pages/onlinestore.html">Shop</a></div>
+                <div class="nav-item"><a href="">Gallery</a></div>
+                <div class="nav-item"><a href="../Pages/student.html">Student Details</a></div>
+                <div class="nav-item"><a href="../Pages/quiz.html">Quiz</a></div>
+                <div class="nav-item"><a href="#">Comments</a></div>
+                <div class="nav-item"><a href="">Site Map</a></div>
+                <div class="nav-item dropdown-head active" id="dropdown-head">
+                    Others <i class="fa fa-caret-down"></i>
+                    <div class="dropdown nav-hide active" id="dropdown">
+                        <div class="dropdown-item"><a href="../Pages/contact.html">Contact</a></div>
+                        <div class="dropdown-item  dr-active"><a href="#">Events</a></div>
+                        <div class="dropdown-item"><a href="">Additional 3</a></div>
+                        <div class="dropdown-item"><a href="">Additional 4</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="burger" id="burger">&#9776;</div>
+        </nav>
+        
+        <!--cart items details-->
+        <div class="cart-container">
+            <div class="cartbox">
+                <span>Full Name:</span>
+                <input type="text" placeholder="John Doe" id="fName">
+            </div>
+            <div class="cartbox">
+                <span>Contact number:</span>
+                <input type="number" id="Num" placeholder="+94xx-xxxxxxx">
+            </div>
+                    
+            <table id="CartTable">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                
+            </table>
+
+            <!-- This is the structure in cart page -->
+            <template id="temp">
+                <tr >
+                <td >
+                    <div class="cart-info">
+                        <img class="cart-img" src="../Img/Storeitems/promask3f.png">
+                        <div>
+                            <p class="item-name">Premium Wooden Mask</p>
+                            <small>Price: $<span class="item-price">75</span></small>
+                            <br>
+                            <a id="count" href="" onclick="removeFromCart(this.id)">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><p type="number" class="item-quantity">1</td>
+                <td>$<span class="item-total">75</span></td>
+                </tr>
+            </template>
+
+
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Total</td>
+                        <td>$<span id="sub-total">0</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <a href="#" onclick="payNow();" class="submit-btn"><span class="btn-text"> Pay Now </span></a>
+
+
+        </div>
+          
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-left">
+                <img src="../Img/Logo.png" alt="">
+    
+                <p class="footer-links">
+                    <a href="../Pages/home.html" class="link-1">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Gallery</a>
+                    <a href="../Pages/student.html">Student Details</a>
+                    <a href="../Pages/quiz.html">Quiz</a>
+                    <a href="#">Comments Form</a>
+                    <a href="#">Site Map</a>
+    
+                </p>
+    
+                <p class="footer-copy-right">Serendib Masks © 2023</p>
+                <div class="page-editor">
+                    <a href="../Pages/student1.html">
+                        <button>Page Editor</button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+                </div>
+    
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+94 112 345 678</p>
+                </div>
+    
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p><a href="mailto:info@serendipmasks.com">info@serendipmasks.com</a></p>
+                </div>
+            </div>
+    
+            <div class="footer-right">
+                <p class="footer-about">
+                    <span>About us</span>
+                    We offers comfortable, high-quality face masks 
+                    made in Sri Lanka with sustainable materials, perfect for 
+                    daily wear and protection against airborne particles.
+                </p>
+    
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+    
+            </div>
+        </footer>
+        <script src="../Js/navbar.js"></script> 
+        <script src="../js/cart.js"></script> 
+        <script src="../js/cartpage.js"></script> 
+        
+    </body>
+    </html>

@@ -1,0 +1,37 @@
+:root {
+    --red: #ad3137;
+    --yellow:#e2cc20;
+    --orange:#f17f0d;
+}
+
+.topic {
+    padding-top: 120px;
+    width: 1349px;
+    font-size: 2rem;
+    text-align: center;
+    height: 30vh;
+    color: var(--yellow);
+    background: rgba(0,0,0,0.9);
+    font-weight: 700;
+}
+
+.sitemap {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 50px;
+  margin-left: -95px;
+}
+
+rect {
+    fill: white;
+    stroke:black;
+    stroke-width: 4px;
+}
+
+rect:hover {
+    fill: rgb(226, 204, 32, 0.7);
+}
+
+#height {
+  height: 60vh;
+}

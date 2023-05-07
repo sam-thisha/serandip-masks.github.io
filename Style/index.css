@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1005;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Splash Screen */
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616 ;
+    transition: 1s;
+}
+
+.logo-header{
+    font-family: 'Cinzel Decorative', cursive;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transition: translate(-50%, -50%);
+    color:#ffffff;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20%;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.text{
+    font-family: 'Julius Sans One', sans-serif;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transition: translate(-50%, -50%);
+    color:#ffffff;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+.container {
+	font-size: 20px;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	
+	background-color:  white;
+	color:black;
+    
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner {
+	margin: auto 0px 3%;
+	padding: 0px 0px 30px;
+}
+
+.titname  {
+	position: absolute;
+	top: 25%;
+	right: 15%;
+	font-size: 125px;
+	color: black;
+}
+
+.bun {
+    text-align: center;
+}
+
+.lemon {
+    text-align: center;
+}
+
+
+
+.accordion{
+    max-width: 800px;
+}
+
+.accordion .contentBx{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
+}
+
+.accordion .contentBx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before{
+    content: '-';
+}
+
+.accordion .contentBx .content{
+    position: relative;
+    background: #cca300 ;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content{
+    height: 150px;
+    padding: 10px;
+}

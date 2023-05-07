@@ -1,0 +1,191 @@
+body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	
+	background-color:  white;
+	color: black;
+}
+
+.banner {
+	font-size: 20px;
+	margin: auto 0px 3%;
+	padding: 0px 0px 30px;
+	
+}
+
+.titname  {
+	position: absolute;
+	top: 20%;
+	right: 8%;
+	font-size: 125px;
+	color:white;
+	
+    
+}
+.row{
+	font-size: 20px;
+}
+.column {
+	float: right;
+	width: 33%;
+	padding: 15px;
+	margin-top: 11%;
+	margin-right: 2%;
+
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.linespace {
+	line-height: 1.6;
+	text-align: justify;
+}
+
+#main_box{
+	min-height: 770px;
+	width: 55%;
+	margin: 5% auto 5% 1%;
+	box-shadow: 4px 8px 6px 8px black;
+	border-radius: 10px;
+	float: left;
+	margin-left: 3%;
+	background-color: #f1f1f1;
+}
+
+.secondry_box{
+	background: transparent;
+	min-height: 600px;
+	width: 50%;
+	margin-top: 9%;
+	margin-left: 23%;
+}
+
+.secondry_box h1{
+	color: black;
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-top: 40px;
+	margin-bottom: 40px; 
+}
+
+
+
+.secondry_box .form{
+	display: block;
+	margin-top: 10%;
+	text-align: center;
+}
+
+.secondry_box .form-hide{
+	display: none;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.secondry_box .field_style{
+	margin-bottom: 15px;
+}
+
+.secondry_box .field_style input,
+.secondry_box .field_style select,
+.secondry_box textarea{
+	width: 95%;
+	border: solid 3px black;
+	border-radius: 5px;
+	outline: none;
+	margin-bottom: 1.5%;
+	padding: 10px;
+}
+
+.secondry_box textarea{
+	height: 130px;
+	resize: none;
+}
+
+.secondry_box .button3 button[type="submit"]{
+	border: solid 3px black;
+	border-radius: 25px;
+	margin-top: 5px;
+	margin-top: 1%;
+	padding: 15px;
+	width: 60%;
+	background: black;
+	color: #fff;
+	font-size: 15px;
+	
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+.secondry_box .button3 button[type="submit"]:hover{
+	border: solid 3px #cca300;
+	color: #ffff00;
+}
+
+.secondry_box .button3 button[type="submit"]:active{
+	border: solid 3px #cca300;
+	color: #ffff00;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

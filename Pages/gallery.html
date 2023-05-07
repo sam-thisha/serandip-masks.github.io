@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../Style/mystyles.css">
+    <link rel="shortcut icon" href="../Img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/navbar.css">
+    <link rel="stylesheet" href="../Style/footer.css">
+
+    <title>Image Gallery</title>
+  </head>
+  <body>
+
+    <!--Dhanuja-->
+    <nav class="navbar">
+      <div class="logo">
+          <a href="../index.html">
+              <img src="../Img/Logo.png" alt="" />
+          </a>
+      </div>
+      <div class="nav-link" id="nav-link">
+          <div class="nav-item"><a href="../Pages/home.html">Home</a></div>
+          <div class="nav-item"><a href="../Pages/onlinestore.html">Shop</a></div>
+          <div class="nav-item active"><a href="#">Gallery</a></div>
+          <div class="nav-item"><a href="../Pages/student.html">Student Details</a></div>
+          <div class="nav-item"><a href="../Pages/quiz.html">Quiz</a></div>
+          <div class="nav-item"><a href="../Pages/queryform.html">Comments</a></div>
+          <div class="nav-item"><a href="../Pages/sitemap.html">Site Map</a></div>
+          <div class="nav-item dropdown-head" id="dropdown-head">
+              Others <i class="fa fa-caret-down"></i>
+              <div class="dropdown nav-hide" id="dropdown">
+                  <div class="dropdown-item"><a href="../Pages/blog.html">Blog</a></div>
+                  <div class="dropdown-item"><a href="../Pages/contact.html">Contact</a></div>
+                  <div class="dropdown-item"><a href="../Pages/faq.html">FAQ</a></div>
+                  <div class="dropdown-item"><a href="../Pages/events.html">Events</a></div>
+              </div>
+          </div>
+      </div>
+      <div class="burger" id="burger">&#9776;</div>
+  </nav>
+  <!--Dhanuja-->
+
+    <h1><span class="topic">Sri Lankan mask varieties</span></h1>
+    <div class="full-img" id="fullImgBox">
+      <img src="/" id="fullImg" alt="fullimage">
+      <div id="imgDescription"></div>
+      <div class="font-size-buttons">
+        <button onclick="decreaseFontSize()">-</button>
+        <button onclick="increaseFontSize()">+</button>
+      </div>
+      <div class="color-buttons">
+        <button onclick="changeColorScheme('default')">Default</button>
+        <button onclick="changeColorScheme('orange')">Orange</button>
+        <button onclick="changeColorScheme('red')">Red</button>
+        <button onclick="changeColorScheme('random')">Random</button>
+      </div>      
+      <span onclick="closefullImg()">✕</span>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div
+          onmouseover="showFullImg('../Img/KolamBig.png', 'Kolam masks are traditional wooden masks worn at Sri Lankan festivals and traditional dance performances. Each one represents a different character or creature from mythology, folklore, or everyday life, and each has a special connotation.')"
+        >
+          <img src="../Img/Kolam.png" alt="Image Kolam" class="img-style">
+          <div class="text-block">
+            <h4>Kolam</h4>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div
+          onmouseover="showFullImg('../Img/SanniBig.png', 'Sanni masks are traditional wooden masks used in Sri Lankan exorcisms and healing rituals that are thought to have supernatural powers to fend off diseases and evil spirits. They have detailed carvings that depict numerous disease-causing demons and spirits.')"
+        >
+          <img src="../Img/Sanni.png" alt="Image Sanni" class="img-style">
+          <div class="text-block">
+            <h4>Sanni</h4>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div
+          onmouseover="showFullImg('../Img/RakshaBig.png', 'Raksha masks are used in Sri Lankan festivals and cultural dances to ward off evil. They are painted in vibrant colors with bulging eyes and protruding tongues and depict various types of demons. They are a tribute to the Rakshasas, a race that ruled Sri Lanka.')"
+        >
+          <img src="../Img/Raksha.png" alt="Image Raksha" class="img-style">
+          <div class="text-block">
+            <h4>Raksha</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+      var imgDescription = document.getElementById("imgDescription");
+      var fontSize = 20;
+      var colorScheme = "black";
+
+      function showFullImg(pic, description) {
+        setTimeout(function() {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+            imgDescription.innerHTML = description;
+        }, 2200);
+      }
+
+      function closefullImg() {
+        fullImgBox.style.display = "none";
+      }
+
+      function decreaseFontSize() {
+        fontSize--;
+        imgDescription.style.fontSize = fontSize + "px";
+      }
+
+      function increaseFontSize() {
+        fontSize++;
+        imgDescription.style.fontSize = fontSize + "px";
+      }
+
+      function changeColorScheme(newScheme) {
+      colorScheme = newScheme;
+      if (colorScheme === "default") {
+        fullImgBox.style.backgroundColor = "rgba(0,0,0,0.9)" ;
+        fullImgBox.style.color = "white";
+      } else if (colorScheme === "orange") {
+        fullImgBox.style.backgroundColor = "rgb(241, 127, 13, 0.9)";
+        fullImgBox.style.color = "white";
+      } else if (colorScheme === "red") {
+        fullImgBox.style.backgroundColor = "rgb(173, 49, 55, 0.9)";
+        fullImgBox.style.color = "white";
+      } else if (colorScheme === "random") {
+        var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        fullImgBox.style.backgroundColor = randomColor;
+        fullImgBox.style.color = "white";
+      }
+    }
+    </script>
+
+ <!-- FOOTER SECTION -->
+ <footer class="footer">
+  <div class="footer-left">
+      <img src="../Img/Logo.png" alt="">
+
+      <p class="footer-links">
+          <a href="../Pages/home.html" class="link-1">Home</a>
+          <a href="../Pages/onlinestore.html">Shop</a>
+          <a href="../Pages/gallery.html">Gallery</a>
+          <a href="../Pages/student.html">Student Details</a>
+          <a href="../Pages/quiz.html">Quiz</a>
+          <a href="../Pages/queryform.html">Comments Form</a>
+          <a href="../Pages/sitemap.html">Site Map</a>
+
+      </p>
+
+      <p class="footer-copy-right">Serendib Masks © 2023</p>
+      <div class="page-editor">
+          <a href="../Pages/student4.html">
+              Page Editor
+          </a>
+      </div>
+  </div>
+
+  <div class="footer-center">
+      <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+      </div>
+
+      <div>
+          <i class="fa fa-phone"></i>
+          <p>+94 112 345 678</p>
+      </div>
+
+      <div>
+          <i class="fa-solid fa-envelope"></i>
+          <p><a href="mailto:info@serendipmasks.com">info@serendipmasks.com</a></p>
+      </div>
+  </div>
+
+  <div class="footer-right">
+      <p class="footer-about">
+          <span>About us</span>
+          We offers comfortable, high-quality face masks 
+          made in Sri Lanka with sustainable materials, perfect for 
+          daily wear and protection against airborne particles.
+      </p>
+
+      <div class="footer-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+  </div>
+ </footer>
+ <script src="../Js/navbar.js"></script>
+</body>
+</html>

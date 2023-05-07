@@ -1,0 +1,156 @@
+
+.navbar{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--red);
+    height: 100px;
+}
+.burger{
+    display: none;
+}
+.navbar .logo img{
+    position: absolute;
+    top: 0;
+    width: 90px;
+}
+.navbar input[type=checkbox]{
+    display: none;
+}
+.nav-hide{
+    animation: grow 600ms;
+    transform-origin: bottom center;
+    display: none !important;
+}
+
+.nav-link{
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-item{
+    text-align: center;
+    margin: 0 5px;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+.nav-item a{
+    
+    color: white;
+    text-decoration: none;
+}
+.nav-item:hover{
+    transition: 500ms;
+    background-color: var(--dark-brown);
+}
+.nav-item:hover .dropdown{
+    transition: 500ms;
+    background-color: var(--dark-brown);
+}
+.dropdown-head{
+    width: 130px;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleY(0)
+    }
+
+    100%{
+        transform: scaleY(1)
+    }
+}
+@keyframes gain {
+    0% {
+        transform: scaleY(1)
+    }
+
+    100%{
+        transform: scaleY(0)
+    }
+}
+
+.dropdown{
+    right: 5px;
+    position:absolute;
+    background-color: var(--red);
+    padding: 5px 16px 16px 10px;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: grow 600ms;
+    transform-origin: top center;
+}
+.dropdown-item{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 8px;
+}
+.dropdown-item:hover{
+    background-color: var(--red);
+}
+
+.active{
+    background-color: var(--brown) !important;
+}
+.dr-active{
+    background-color: var(--red) !important;
+}
+.nav-show{
+    display: block !important;
+    animation: grow 600ms;
+    transform-origin: top center;
+}
+
+@media screen and (max-width: 950px){
+    .nav-link{
+        background-color: var(--red);
+        display: none;
+        top: 100px;
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .burger{
+        display: block;
+        color: white;
+        font-size: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+
+    .dropdown-head{
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+    .dropdown{
+        display: block;
+        position: relative;
+        padding: 5px;
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+    .dropdown-item{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+
+
+}
